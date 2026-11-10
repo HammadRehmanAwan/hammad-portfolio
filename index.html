@@ -4,294 +4,425 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hammad Rehman — AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- NAV -->
   <nav id="navbar">
-    <div class="nav-logo">HR</div>
+    <a href="#hero" class="nav-logo">Hammad<span>.</span></a>
     <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <a href="https://github.com/HammadRehmanAwan" target="_blank" class="nav-cta">GitHub ↗</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <section id="hero">
-    <canvas id="galaxy-canvas"></canvas>
-    <div class="hero-content">
-      <div class="glitch-wrapper">
-        <h1 class="glitch" data-text="Hammad Rehman">Hammad Rehman</h1>
-      </div>
-      <p class="hero-subtitle">
-        <span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-inner">
+      <div class="hero-tag">👋 Available for AI projects</div>
+      <h1>
+        Building intelligent<br />
+        systems that <em>actually</em><br />
+        work in production.
+      </h1>
+      <p class="hero-desc">
+        I'm <strong>Hammad Rehman</strong> — an AI &amp; Forward Deployed Engineer. MSc AI Technology (Commendation). I ship LLM tools for pipeline reporting, CRM automation, and sales workflows using Claude, LangChain, n8n and HubSpot.
       </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-solid">See my work</a>
+        <a href="https://huggingface.co/HammadRehman" target="_blank" class="btn-ghost">HuggingFace ↗</a>
       </div>
-      <div class="scroll-indicator"><div class="scroll-arrow"></div></div>
+      <div class="hero-social">
+        <a href="https://github.com/HammadRehmanAwan" target="_blank">GitHub</a>
+        <span>·</span>
+        <a href="https://www.linkedin.com/in/hammadrehman454/" target="_blank">LinkedIn</a>
+        <span>·</span>
+        <a href="https://huggingface.co/HammadRehman" target="_blank">HuggingFace</a>
+      </div>
     </div>
+    <div class="hero-scroll">scroll</div>
   </section>
 
-  <!-- About -->
+  <!-- ABOUT -->
   <section id="about">
-    <div class="section-container">
-      <h2 class="section-title">About <span class="hl-cyan">Me</span></h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I'm an <span class="hl-cyan">AI Engineer</span> passionate about building intelligent systems that push the boundaries of what's possible. I specialize in <span class="hl-purple">Large Language Models</span>, <span class="hl-pink">Retrieval-Augmented Generation</span>, and deploying production-ready AI applications.</p>
-          <p>From building <span class="hl-green">AI-powered financial risk tools</span> to shipping interactive <span class="hl-orange">Spaces on HuggingFace</span>, I bridge cutting-edge research with real-world impact that people can actually use.</p>
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-left">
+          <p class="section-label">About</p>
+          <h2>From research to<br />real-world impact.</h2>
+        </div>
+        <div class="about-right">
+          <p>
+            I'm an AI &amp; Forward Deployed Engineer who builds things that ship. My recent work at <strong>Where You At Ltd</strong> spans LLM-powered pipeline dashboards, CRM automation with n8n &amp; HubSpot, Slack AI assistants, and prospect outreach tools — systems used daily in sales and operations.
+          </p>
+          <p>
+            I hold an <strong>MSc in AI Technology (Commendation)</strong> from Northumbria University, with a dissertation forecasting NHS waiting times across 120 providers. I publish projects on HuggingFace and GitHub, and care about making AI genuinely useful beyond the research lab.
+          </p>
           <div class="about-stats">
-            <div class="stat">
-              <span class="stat-number" data-target="4">0</span><span>+</span>
-              <p>Live Spaces</p>
+            <div class="stat-item">
+              <strong>£725k</strong>
+              <span>Deals identified at WYA</span>
             </div>
-            <div class="stat">
-              <span class="stat-number" data-target="3">0</span><span>+</span>
-              <p>AI Domains</p>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <strong>283+</strong>
+              <span>Chrome extension installs</span>
             </div>
-            <div class="stat">
-              <span class="stat-number" data-target="100">0</span><span>%</span>
-              <p>Passion</p>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <strong>MSc</strong>
+              <span>Commendation · AI Technology</span>
             </div>
-          </div>
-        </div>
-        <div class="about-visual">
-          <div class="orbit-container">
-            <div class="orbit-core">AI</div>
-            <div class="orbit orbit-1"><div class="orbit-dot">🤖</div></div>
-            <div class="orbit orbit-2"><div class="orbit-dot">🧠</div></div>
-            <div class="orbit orbit-3"><div class="orbit-dot">⚡</div></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Experience</p>
+        <h2>Where I've shipped.</h2>
+      </div>
+      <div class="exp-timeline">
+
+        <div class="exp-item reveal">
+          <div class="exp-header">
+            <div class="exp-info">
+              <h3>Forward Deployed AI Engineer</h3>
+              <p class="exp-company">Where You At Ltd (WYA) · London · Internship</p>
+            </div>
+            <span class="exp-date">Jul – Oct 2026</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Built a probability-weighted pipeline dashboard using n8n, HubSpot and Postgres, replacing manual board reporting; identified <strong>£725k of deals</strong> omitted from totals and backed the implementation with 117 automated tests.</li>
+            <li>Automated call memos and follow-up drafts from Fireflies transcripts using Claude and n8n, with a Slack approval step before any downstream action.</li>
+            <li>Built a read-only LangChain and Claude assistant in Slack for HubSpot queries; benchmarked local 7B/8B models and recommended hosted API on that basis.</li>
+            <li>Delivered a React venue ROI simulator presented at the company all-hands; built Client Hunter for prospect research and tailored outreach, piloted with Head of Sales.</li>
+          </ul>
+          <div class="exp-tags">
+            <span>Claude</span><span>LangChain</span><span>n8n</span><span>HubSpot</span><span>React</span><span>Postgres</span><span>Slack</span>
+          </div>
+        </div>
+
+        <div class="exp-item reveal reveal-delay-1">
+          <div class="exp-header">
+            <div class="exp-info">
+              <h3>Junior AI Engineer</h3>
+              <p class="exp-company">Web Tackles · UAE · Remote · Part-time</p>
+            </div>
+            <span class="exp-date">May 2025 – May 2026</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Built client credit-risk and mortgage-arrears applications using Python and Gradio/Streamlit, deploying models on HuggingFace Spaces for non-technical users.</li>
+            <li>Developed an email-reply agent using LangChain and Claude/OpenAI APIs, routing replies through automated or human-review workflows.</li>
+          </ul>
+          <div class="exp-tags">
+            <span>Python</span><span>LangChain</span><span>Claude API</span><span>Gradio</span><span>HuggingFace</span><span>scikit-learn</span>
+          </div>
+        </div>
+
+        <div class="exp-item reveal reveal-delay-2">
+          <div class="exp-header">
+            <div class="exp-info">
+              <h3>Software & Game Developer</h3>
+              <p class="exp-company">Caffeine Studios · Upwork / Fiverr · Employee & Freelance</p>
+            </div>
+            <span class="exp-date">2021 – 2024</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Delivered Unity/C# software and 3D/AR applications for international clients; earned Upwork <strong>Top Rated</strong> status, 100% Job Success Score and five-star Fiverr rating.</li>
+            <li>Implemented multiplayer, AR and UI features using Unity/C#, Mirror and Vuforia across Windows, Android and iOS.</li>
+          </ul>
+          <div class="exp-tags">
+            <span>Unity</span><span>C#</span><span>AR/VR</span><span>Vuforia</span><span>Mobile</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
   <section id="skills">
-    <div class="section-container">
-      <h2 class="section-title">Tech <span class="hl-purple">Stack</span></h2>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3><span class="cat-icon">🤖</span> AI / LLMs</h3>
-          <div class="skill-bars">
-            <div class="skill-item"><span>Large Language Models</span><div class="bar"><div class="bar-fill" data-width="95"></div></div></div>
-            <div class="skill-item"><span>RAG Systems</span><div class="bar"><div class="bar-fill" data-width="92"></div></div></div>
-            <div class="skill-item"><span>Fine-Tuning (LoRA / QLoRA)</span><div class="bar"><div class="bar-fill" data-width="88"></div></div></div>
-            <div class="skill-item"><span>AI Agents</span><div class="bar"><div class="bar-fill" data-width="85"></div></div></div>
-          </div>
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Skills</p>
+        <h2>What I work with.</h2>
+      </div>
+
+      <div class="skills-layout">
+        <div class="skill-group">
+          <h3>LLMs & Automation</h3>
+          <ul>
+            <li>LangChain / Tool Calling / Agents <span class="skill-dot"></span></li>
+            <li>Claude &amp; OpenAI APIs <span class="skill-dot"></span></li>
+            <li>RAG &amp; Prompt Engineering <span class="skill-dot"></span></li>
+            <li>n8n workflow automation <span class="skill-dot"></span></li>
+            <li>HubSpot &amp; Slack integrations <span class="skill-dot"></span></li>
+          </ul>
         </div>
-        <div class="skill-category">
-          <h3><span class="cat-icon">🐍</span> Frameworks</h3>
-          <div class="skill-bars">
-            <div class="skill-item"><span>Python</span><div class="bar"><div class="bar-fill" data-width="97"></div></div></div>
-            <div class="skill-item"><span>PyTorch / Transformers</span><div class="bar"><div class="bar-fill" data-width="90"></div></div></div>
-            <div class="skill-item"><span>LangChain / LlamaIndex</span><div class="bar"><div class="bar-fill" data-width="93"></div></div></div>
-            <div class="skill-item"><span>FastAPI / Gradio / Streamlit</span><div class="bar"><div class="bar-fill" data-width="88"></div></div></div>
-          </div>
+
+        <div class="skill-group">
+          <h3>Machine Learning & Data</h3>
+          <ul>
+            <li>scikit-learn · XGBoost · Ridge <span class="skill-dot"></span></li>
+            <li>SHAP explanations <span class="skill-dot"></span></li>
+            <li>Time-series forecasting (ARIMA, Prophet) <span class="skill-dot"></span></li>
+            <li>Python · Pandas · NumPy · SQL <span class="skill-dot"></span></li>
+            <li>Feature engineering &amp; validation <span class="skill-dot"></span></li>
+          </ul>
         </div>
-        <div class="skill-category">
-          <h3><span class="cat-icon">☁️</span> Platforms</h3>
-          <div class="skill-bars">
-            <div class="skill-item"><span>HuggingFace Spaces</span><div class="bar"><div class="bar-fill" data-width="95"></div></div></div>
-            <div class="skill-item"><span>Claude / Anthropic API</span><div class="bar"><div class="bar-fill" data-width="90"></div></div></div>
-            <div class="skill-item"><span>OpenAI API</span><div class="bar"><div class="bar-fill" data-width="88"></div></div></div>
-            <div class="skill-item"><span>Docker / Cloud Deploy</span><div class="bar"><div class="bar-fill" data-width="78"></div></div></div>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3><span class="cat-icon">📊</span> Data & Finance AI</h3>
-          <div class="skill-bars">
-            <div class="skill-item"><span>Financial Risk Modeling</span><div class="bar"><div class="bar-fill" data-width="85"></div></div></div>
-            <div class="skill-item"><span>Vector DBs (Pinecone/Chroma)</span><div class="bar"><div class="bar-fill" data-width="90"></div></div></div>
-            <div class="skill-item"><span>SQL / PostgreSQL</span><div class="bar"><div class="bar-fill" data-width="82"></div></div></div>
-            <div class="skill-item"><span>Pandas / NumPy / Sklearn</span><div class="bar"><div class="bar-fill" data-width="92"></div></div></div>
-          </div>
+
+        <div class="skill-group">
+          <h3>Cloud & Deployment</h3>
+          <ul>
+            <li>Microsoft Azure (Developer Associate) <span class="skill-dot"></span></li>
+            <li>HuggingFace Spaces · Gradio <span class="skill-dot"></span></li>
+            <li>Vercel · Netlify · FastAPI <span class="skill-dot"></span></li>
+            <li>Docker · Supabase (vector DB) <span class="skill-dot"></span></li>
+            <li>React · JavaScript · REST APIs <span class="skill-dot"></span></li>
+          </ul>
         </div>
       </div>
-      <div class="tech-badges">
-        <span class="badge">Python</span>
-        <span class="badge">PyTorch</span>
-        <span class="badge">Transformers</span>
-        <span class="badge">LangChain</span>
-        <span class="badge">Claude API</span>
-        <span class="badge">HuggingFace</span>
-        <span class="badge">RAG</span>
-        <span class="badge">LoRA / QLoRA</span>
-        <span class="badge">Gradio</span>
-        <span class="badge">FastAPI</span>
-        <span class="badge">LlamaIndex</span>
-        <span class="badge">Pinecone</span>
-        <span class="badge">Streamlit</span>
-        <span class="badge">Ollama</span>
-        <span class="badge">Docker</span>
-        <span class="badge">Scikit-learn</span>
+
+      <div class="chip-row">
+        <span>Python</span><span>LangChain</span><span>Claude API</span>
+        <span>n8n</span><span>HubSpot</span><span>RAG</span>
+        <span>scikit-learn</span><span>XGBoost</span><span>SHAP</span>
+        <span>React</span><span>FastAPI</span><span>Docker</span>
+        <span>Azure</span><span>Supabase</span><span>HuggingFace</span>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- PROJECTS -->
   <section id="projects">
-    <div class="section-container">
-      <h2 class="section-title">Featured <span class="hl-pink">Projects</span></h2>
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Projects</p>
+        <h2>Things I've built.</h2>
+        <p class="section-sub">Live projects on HuggingFace — click any card to open it.</p>
+      </div>
+
       <div class="projects-grid">
 
-        <!-- HuggingFace Space 1 -->
-        <div class="project-card" data-tilt>
-          <div class="project-header">
-            <span class="project-icon">📈</span>
-            <div class="project-links">
-              <a href="https://huggingface.co/spaces/HammadRehman/Crypto-Futures-AI-Calculator" target="_blank" class="hf-link" title="HuggingFace Space">🤗</a>
+        <a href="https://github.com/HammadRehmanAwan" target="_blank" class="project-card featured">
+          <div class="card-top">
+            <div class="card-badges">
+              <span class="badge-live">Live</span>
+              <span class="badge-type">MSc Dissertation</span>
             </div>
+            <span class="card-arrow">↗</span>
           </div>
-          <span class="project-badge badge-live">● Live</span>
-          <h3>Crypto Futures AI Calculator</h3>
-          <p>Real-time AI-powered calculator for crypto futures trading — computes position sizing, leverage risk, liquidation prices, and profit/loss projections with intelligent recommendations.</p>
-          <div class="project-tags">
-            <span>HuggingFace Space</span><span>Python</span><span>AI</span><span>Crypto</span>
+          <div class="card-icon">🏥</div>
+          <h3>NHS Elective Waiting-Time Forecasting</h3>
+          <p>Processed 7.7 GB of NHS RTT data (~10.7M rows) into a 105,314-row panel across 120 providers. Ridge regression model achieved MAE of 1.977 weeks on a held-out 2025 year — 4.4% below persistence baseline. SHAP analysis identified key predictors.</p>
+          <div class="card-tags">
+            <span>scikit-learn</span><span>XGBoost</span><span>SHAP</span><span>Python</span><span>Pandas</span>
           </div>
-        </div>
+        </a>
 
-        <!-- HuggingFace Space 2 -->
-        <div class="project-card" data-tilt>
-          <div class="project-header">
-            <span class="project-icon">🏠</span>
-            <div class="project-links">
-              <a href="https://huggingface.co/spaces/HammadRehman/UK-Mortgage-Arrears-Risk" target="_blank" class="hf-link" title="HuggingFace Space">🤗</a>
+        <a href="https://consult-room-gp.netlify.app" target="_blank" class="project-card">
+          <div class="card-top">
+            <div class="card-badges">
+              <span class="badge-live">Live</span>
+              <span class="badge-agent">AI Agent</span>
             </div>
+            <span class="card-arrow">↗</span>
           </div>
-          <span class="project-badge badge-agent">⚙ AI Agent</span>
+          <div class="card-icon">🩺</div>
+          <h3>Consult Room — AI Patient Role-Play</h3>
+          <p>Voice-based GP consultation trainer: trainees speak with an LLM patient in real time, within a 12-minute station clock, then receive marks across data gathering, clinical management and communication — citing their own words as evidence.</p>
+          <div class="card-tags">
+            <span>LLM</span><span>Voice</span><span>MedEd</span><span>Netlify</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/HammadRehmanAwan" target="_blank" class="project-card">
+          <div class="card-top">
+            <div class="card-badges">
+              <span class="badge-live">Live</span>
+              <span class="badge-type">Chrome Extension</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-icon">📧</div>
+          <h3>Gmail Emotion Analyser</h3>
+          <p>Chrome extension with <strong>283+ installs</strong> that classifies the emotional tone of opened Gmail emails across 7 emotions with per-emotion confidence scores. Generates reply drafts tailored to the detected emotion, addressing the sender by name.</p>
+          <div class="card-tags">
+            <span>Chrome Extension</span><span>HuggingFace</span><span>JavaScript</span><span>NLP</span>
+          </div>
+        </a>
+
+        <a href="https://hammadrehmanawan.github.io/my-crypto-future-trading-calculator" target="_blank" class="project-card">
+          <div class="card-top">
+            <div class="card-badges">
+              <span class="badge-live">Live</span>
+              <span class="badge-type">GitHub Pages</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-icon">📈</div>
+          <h3>FutureX — AI Crypto Futures Calculator</h3>
+          <p>Educational futures-analysis dashboard for 15 crypto assets — combines live prices, technical indicators, futures data, market sentiment and whale activity with Amazon Chronos time-series forecasting served from a HuggingFace Space.</p>
+          <div class="card-tags">
+            <span>Chronos</span><span>HuggingFace</span><span>JavaScript</span><span>Trading</span>
+          </div>
+        </a>
+
+        <a href="https://huggingface.co/spaces/HammadRehman/UK-Mortgage-Arrears-Risk" target="_blank" class="project-card">
+          <div class="card-top">
+            <div class="card-badges">
+              <span class="badge-live">Live</span>
+              <span class="badge-agent">AI Agent</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-icon">🏠</div>
           <h3>UK Mortgage Arrears Risk Predictor</h3>
-          <p>Predicts mortgage arrears risk for UK homeowners using an AI agent that analyzes income, LTV ratios, payment history, and macroeconomic indicators to assess financial vulnerability.</p>
-          <div class="project-tags">
-            <span>AI Agent</span><span>Risk Modeling</span><span>FinTech</span><span>UK Finance</span>
+          <p>AI agent that analyses income, LTV ratios, payment history, and macroeconomic indicators to assess mortgage arrears risk for UK homeowners — deployed on HuggingFace Spaces.</p>
+          <div class="card-tags">
+            <span>AI Agent</span><span>FinTech</span><span>Risk</span><span>Gradio</span>
           </div>
-        </div>
+        </a>
 
-        <!-- HuggingFace Space 3 -->
-        <div class="project-card" data-tilt>
-          <div class="project-header">
-            <span class="project-icon">🏦</span>
-            <div class="project-links">
-              <a href="https://huggingface.co/spaces/HammadRehman/German-Credit-Risk" target="_blank" class="hf-link" title="HuggingFace Space">🤗</a>
+        <a href="https://huggingface.co/spaces/HammadRehman/German-Credit-Risk" target="_blank" class="project-card">
+          <div class="card-top">
+            <div class="card-badges">
+              <span class="badge-live">Live</span>
+              <span class="badge-agent">AI Agent</span>
             </div>
+            <span class="card-arrow">↗</span>
           </div>
-          <span class="project-badge badge-agent">⚙ AI Agent</span>
+          <div class="card-icon">🏦</div>
           <h3>German Credit Risk Classifier</h3>
-          <p>Predicts credit risk for German loan applicants using an AI agent trained on the UCI German Credit dataset — classifies applicants as good/bad credit risks with probability scores.</p>
-          <div class="project-tags">
-            <span>AI Agent</span><span>Credit Risk</span><span>ML</span><span>Banking</span>
+          <p>AI agent trained on the UCI German Credit dataset — classifies loan applicants as good/bad credit risks with probability scores and SHAP-based reasoning, deployed on HuggingFace Spaces.</p>
+          <div class="card-tags">
+            <span>ML</span><span>SHAP</span><span>Banking</span><span>Gradio</span>
           </div>
-        </div>
-
-        <!-- HuggingFace Space 4 -->
-        <div class="project-card" data-tilt>
-          <div class="project-header">
-            <span class="project-icon">🚗</span>
-            <div class="project-links">
-              <a href="https://huggingface.co/spaces/HammadRehman/hammad-s-space" target="_blank" class="hf-link" title="HuggingFace Space">🤗</a>
-            </div>
-          </div>
-          <span class="project-badge badge-space">▶ Interactive</span>
-          <h3>Cyber Car Racing Game</h3>
-          <p>A fully interactive browser-based cyber car racing game built as a HuggingFace Space — dodge obstacles in a neon-lit cyberpunk world with increasing difficulty levels.</p>
-          <div class="project-tags">
-            <span>HuggingFace Space</span><span>Interactive</span><span>Game</span><span>Cyberpunk</span>
-          </div>
-        </div>
-
-        <!-- Additional AI Project -->
-        <div class="project-card" data-tilt>
-          <div class="project-header">
-            <span class="project-icon">🧠</span>
-            <div class="project-links">
-              <a href="https://github.com/HammadRehmanAwan" target="_blank" title="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.8 2.7 1.3 3.3 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2 0-.3-.5-1.5.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 5.8 18 6.1 18 6.1c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.2.9 2.3v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
-              </a>
-            </div>
-          </div>
-          <span class="project-badge badge-space">🔬 Research</span>
-          <h3>RAG-Powered Knowledge Assistant</h3>
-          <p>End-to-end Retrieval-Augmented Generation pipeline using LlamaIndex and Pinecone for domain-specific Q&A — ingests PDFs, websites, and structured data into a queryable vector store.</p>
-          <div class="project-tags">
-            <span>LlamaIndex</span><span>Pinecone</span><span>RAG</span><span>FastAPI</span>
-          </div>
-        </div>
-
-        <!-- Additional AI Project -->
-        <div class="project-card" data-tilt>
-          <div class="project-header">
-            <span class="project-icon">⚡</span>
-            <div class="project-links">
-              <a href="https://github.com/HammadRehmanAwan" target="_blank" title="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.8 2.7 1.3 3.3 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2 0-.3-.5-1.5.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 5.8 18 6.1 18 6.1c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.2.9 2.3v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
-              </a>
-            </div>
-          </div>
-          <span class="project-badge badge-space">🔧 Open Source</span>
-          <h3>LLM Fine-Tuning Pipeline</h3>
-          <p>Custom LoRA/QLoRA fine-tuning framework for Llama, Mistral, and Phi models — includes RLHF support, automatic evaluation with benchmarks, and one-click HuggingFace Hub publishing.</p>
-          <div class="project-tags">
-            <span>PEFT</span><span>LoRA</span><span>HuggingFace</span><span>PyTorch</span>
-          </div>
-        </div>
+        </a>
 
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- CONTACT -->
   <section id="contact">
-    <div class="section-container">
-      <h2 class="section-title">Get In <span class="hl-green">Touch</span></h2>
-      <p class="contact-intro">Have an AI project in mind? Let's build something extraordinary together.</p>
-      <div class="contact-grid">
-        <div class="contact-links">
-          <a href="https://github.com/HammadRehmanAwan" target="_blank" class="contact-card">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.8 2.7 1.3 3.3 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2 0-.3-.5-1.5.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 5.8 18 6.1 18 6.1c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.2.9 2.3v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
-            </div>
-            <div><h4>GitHub</h4><p>HammadRehmanAwan</p></div>
-            <span class="arrow">→</span>
-          </a>
-          <a href="https://www.linkedin.com/in/hammadrehman454/" target="_blank" class="contact-card">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </div>
-            <div><h4>LinkedIn</h4><p>hammadrehman454</p></div>
-            <span class="arrow">→</span>
-          </a>
-          <a href="https://huggingface.co/HammadRehman" target="_blank" class="contact-card">
-            <div class="contact-icon hf-icon">🤗</div>
-            <div><h4>HuggingFace</h4><p>HammadRehman — 4 Live Spaces</p></div>
-            <span class="arrow">→</span>
-          </a>
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-left">
+          <p class="section-label">Contact</p>
+          <h2>Let's build something together.</h2>
+          <p>Whether it's a new AI product, a tricky LLM problem, or an open-source idea — I'm always up for a good conversation.</p>
+          <div class="contact-links">
+            <a href="https://github.com/HammadRehmanAwan" target="_blank">
+              <span class="link-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.8 2.7 1.3 3.3 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2 0-.3-.5-1.5.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 5.8 18 6.1 18 6.1c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.2.9 2.3v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+              </span>
+              GitHub — HammadRehmanAwan
+            </a>
+            <a href="https://www.linkedin.com/in/hammadrehman454/" target="_blank">
+              <span class="link-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 .774 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </span>
+              LinkedIn — hammadrehman454
+            </a>
+            <a href="https://huggingface.co/HammadRehman" target="_blank">
+              <span class="link-icon">🤗</span>
+              HuggingFace — HammadRehman
+            </a>
+          </div>
         </div>
 
-        <div class="contact-form-wrapper">
-          <form class="contact-form" id="contactForm">
-            <div class="form-group"><input type="text" placeholder="Your Name" required /></div>
-            <div class="form-group"><input type="email" placeholder="Your Email" required /></div>
-            <div class="form-group"><textarea rows="5" placeholder="Tell me about your project..."></textarea></div>
-            <button type="submit" class="btn btn-primary full-width">Send Message</button>
-          </form>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-field">
+              <label>Name</label>
+              <input type="text" placeholder="Your name" required />
+            </div>
+            <div class="form-field">
+              <label>Email</label>
+              <input type="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Message</label>
+            <textarea rows="5" placeholder="Tell me about your project..."></textarea>
+          </div>
+          <button type="submit">Send message →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Education</p>
+        <h2>Academic background.</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-top">
+            <span class="edu-degree">MSc Artificial Intelligence Technology</span>
+            <span class="edu-grade">Commendation</span>
+          </div>
+          <p class="edu-school">Northumbria University, London</p>
+          <p class="edu-year">2025 – 2026</p>
+          <p class="edu-note">Dissertation: NHS Elective Waiting-Time Forecasting — MAE 1.977 weeks on held-out 2025 data, 4.4% below persistence baseline across 120 providers.</p>
+        </div>
+        <div class="edu-card reveal reveal-delay-1">
+          <div class="edu-top">
+            <span class="edu-degree">BSc (Hons) Software Engineering</span>
+          </div>
+          <p class="edu-school">Lahore Garrison University, Pakistan</p>
+          <p class="edu-year">2019 – 2023</p>
+        </div>
+      </div>
+      <div class="cert-row reveal reveal-delay-2">
+        <div class="cert-item">
+          <span class="cert-icon">🏆</span>
+          <span>Microsoft Certified: Azure Developer Associate</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-icon">🎓</span>
+          <span>President, Game Development Society — Northumbria University Students' Union</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-icon">⭐</span>
+          <span>Upwork Top Rated · 100% Job Success Score</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
-    <p>Crafted with 💜 by <span class="footer-gradient">Hammad Rehman</span> — AI Engineer</p>
-    <p class="footer-sub">© 2026 · All rights reserved</p>
+    <div class="container footer-inner">
+      <span>© 2026 Hammad Rehman</span>
+      <div class="footer-links">
+        <a href="https://github.com/HammadRehmanAwan" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/hammadrehman454/" target="_blank">LinkedIn</a>
+        <a href="https://huggingface.co/HammadRehman" target="_blank">HuggingFace</a>
+      </div>
+    </div>
   </footer>
 
   <script src="main.js"></script>
